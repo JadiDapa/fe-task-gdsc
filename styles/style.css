@@ -744,6 +744,10 @@ video {
   margin-top: 3rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -768,16 +772,8 @@ video {
   margin-top: 2rem;
 }
 
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .box-border {
@@ -903,6 +899,14 @@ video {
   width: 15rem;
 }
 
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[23\.5\%\] {
+  width: 23.5%;
+}
+
 .w-\[32\%\] {
   width: 32%;
 }
@@ -939,16 +943,28 @@ video {
   width: 100%;
 }
 
-.w-\[24\%\] {
-  width: 24%;
+.w-\[70\%\] {
+  width: 70%;
 }
 
-.w-\[23\%\] {
-  width: 23%;
+.w-\[60\%\] {
+  width: 60%;
 }
 
-.w-\[23\.5\%\] {
-  width: 23.5%;
+.w-\[67\%\] {
+  width: 67%;
+}
+
+.w-\[68\%\] {
+  width: 68%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-\[49\%\] {
@@ -970,10 +986,6 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
 }
 
 .flex-shrink {
@@ -2268,6 +2280,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-3xl\/10 {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2350,6 +2367,10 @@ video {
 
 .leading-\[80px\] {
   line-height: 80px;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
 }
 
 .tracking-tight {
