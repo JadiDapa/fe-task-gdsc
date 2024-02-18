@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="overflow-x-hidden">
     <!-- Hero Section [start] -->
@@ -26,7 +27,11 @@
           <li class=""><a href="#about">ABOUT</a></li>
           <li class=""><a href="#services">SERVICES</a></li>
           <li class=""><a href="#members">TEAM</a></li>
-          <button class="text-blue-500 border px-1.5 py-1">Get In Touch</button>
+          <button
+            class="text-blue-500 border px-1.5 py-1 duration-300 hover:bg-blue-700 hover:text-white hover:scale-105"
+          >
+            Get In Touch
+          </button>
         </ul>
         <div class="md:hidden">
           <ion-icon
@@ -90,33 +95,38 @@
       <div class="mt-12 md:mt-24 md:mx-24">
         <div class="md:flex justify-between">
           <div class="flex flex-col justify-center md:w-[55%]">
-            <h3 class="text-xl font-semibold text-slate-500 max-md:text-center">
+            <h3
+              data-aos="fade-down"
+              class="text-xl font-semibold text-slate-500 max-md:text-center"
+            >
               WEBSITE BUILDER
             </h3>
             <h1
+              data-aos="fade-right"
               class="text-4xl md:text-[66px] md:leading-[80px] font-semibold mt-4 tracking-tight max-md:text-center"
             >
               We Will Create the "Perfect" Website for Your Needies'
             </h1>
             <button
-              class="py-1.5 px-2.5 md:py-3 md:px-5 text-xl md:text-3xl font-semibold rounded-lg bg-blue-500 text-white max-w-max mt-6 md:mt-12 max-md:mx-auto"
+              class="py-1.5 px-2.5 md:py-3 md:px-5 text-xl md:text-3xl font-semibold rounded-lg bg-blue-500 text-white max-w-max mt-6 md:mt-12 max-md:mx-auto duration-300 hover:bg-blue-700 hover:scale-105"
             >
               Get In Touch
             </button>
           </div>
           <div class="md:w-[43%] max-md:mt-8">
             <img
-              src="/img/image1.png"
+              data-aos="flip-left"
+              src="img/image1.png"
               class="w-3/4 md:w-full max-md:mx-auto rounded-md"
               alt=""
             />
           </div>
         </div>
         <div class="md:w-1/2 max-md:mt-6 max-md:hidden">
-          <p class="text-2xl font-semibold max-w-lg">
+          <p class="text-2xl font-semibold max-w-lg" data-aos="fade-right">
             I feel so much less stressed ❤️ as I now know by the book.”
           </p>
-          <div class="flex gap-6 items-center mt-4">
+          <div class="flex gap-6 items-center mt-4" data-aos="fade-up">
             <img class="rounded-full w-14" src="img/pep1.png" alt="" />
             <div class="text-lg">
               <div class="font-semibold text-2xl">Daffa Althaf R</div>
@@ -139,12 +149,18 @@
         <img src="img/vector1.png" class="w-60" alt="" />
       </div>
       <div class="w-full max-w-xl max-md:text-center z-10">
-        <h3 class="text-xl md:text-lg font-semibold">ABOUT US</h3>
-        <h2 class="text-3xl md:text-5xl font-bold mt-8 tracking-wide">
+        <h3 class="text-xl md:text-lg font-semibold" data-aos="fade-down">
+          ABOUT US
+        </h3>
+        <h2
+          class="text-3xl md:text-5xl font-bold mt-8 tracking-wide"
+          data-aos="fade-right"
+        >
           Unleash Your Creativity, Shape Your Online Presence!
         </h2>
         <p
           class="mt-8 md:font-semibold md:text-lg leading-6 max-md:text-justify px-2"
+          data-aos="fade-right"
         >
           Welcome to
           <span class="font-bold text-orange-600">FADHAV</span> Studio! With a
@@ -159,7 +175,7 @@
       <div
         class="flex flex-wrap mt-12 justify-between md:gap-y-8 gap-4 max-md:text-sm text-justify"
       >
-        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+        <div class="flex gap-6 md:max-w-[49%] max-md:p-2" data-aos="zoom-in-up">
           <div class="max-md:hidden">
             <div class="text-4xl text-slate-400">
               <ion-icon name="chatbubbles-outline"></ion-icon>
@@ -182,7 +198,11 @@
           </div>
         </div>
 
-        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+        <div
+          class="flex gap-6 md:max-w-[49%] max-md:p-2"
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+        >
           <div class="max-md:hidden">
             <div class="text-4xl text-slate-400">
               <ion-icon name="sparkles-outline"></ion-icon>
@@ -205,7 +225,11 @@
           </div>
         </div>
 
-        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+        <div
+          class="flex gap-6 md:max-w-[49%] max-md:p-2"
+          data-aos="zoom-in-up"
+          data-aos-delay="400"
+        >
           <div class="max-md:hidden">
             <div class="text-4xl text-slate-400">
               <ion-icon name="phone-portrait-outline"></ion-icon>
@@ -228,7 +252,11 @@
           </div>
         </div>
 
-        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+        <div
+          class="flex gap-6 md:max-w-[49%] max-md:p-2"
+          data-aos="zoom-in-up"
+          data-aos-delay="600"
+        >
           <div class="max-md:hidden">
             <div class="text-4xl text-slate-400">
               <ion-icon name="people-outline"></ion-icon>
@@ -262,11 +290,15 @@
       class="container mx-auto md:px-32 w-[90%] max-md:mt-20 relative"
     >
       <div class="md:flex justify-between">
-        <h2 class="text-4xl font-bold max-w-md max-md:text-center">
+        <h2
+          class="text-4xl font-bold max-w-md max-md:text-center"
+          data-aos="fade-right"
+        >
           What we provided for you
         </h2>
         <div
           class="hidden md:flex items-center gap-2 text-blue-600 max-md:mt-4"
+          data-aos="fade-left"
         >
           <span class="underline font-semibold">Experienced team</span>
           <span
@@ -280,7 +312,10 @@
       <div
         class="flex flex-col md:flex-row justify-center gap-4 md:justify-between mt-4 md:mt-20"
       >
-        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+        <div
+          class="md:w-[32%] custom-b-shadow rounded-lg"
+          data-aos="flip-right"
+        >
           <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
             <div class="text-3xl font-semibold max-md:text-center">
               Landing Page
@@ -299,7 +334,11 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+        <div
+          class="md:w-[32%] custom-b-shadow rounded-lg"
+          data-aos="flip-right"
+          data-aos-delay="300"
+        >
           <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
             <div class="text-3xl font-semibold max-md:text-center">SAAS</div>
             <div class="max-md:text-center mt-2">
@@ -316,7 +355,11 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+        <div
+          class="md:w-[32%] custom-b-shadow rounded-lg"
+          data-aos="flip-right"
+          data-aos-delay="600"
+        >
           <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
             <div class="text-3xl font-semibold max-md:text-center">
               Web Ecosystem
@@ -348,10 +391,10 @@
       class="mt-48 container mx-auto px-2 md:px-32 w-[90%] relative"
     >
       <div class="text-center">
-        <h2 class="text-4xl md:text-5xl font-bold">
+        <h2 class="text-4xl md:text-5xl font-bold" data-aos="fade-down">
           Those who does the "Magic"
         </h2>
-        <h3 class="mt-4 md:text-lg max-w-2xl mx-auto">
+        <h3 class="mt-4 md:text-lg max-w-2xl mx-auto" data-aos="fade-up">
           Just like skilled magicians mesmerize audiences with their magic, this
           team utilizes expertise and creativity to craft captivating online
           realms, weaving digital wonders that leave a lasting impression on
@@ -359,7 +402,7 @@
         </h3>
       </div>
       <div class="mt-8 flex gap-2 justify-between flex-wrap">
-        <div class="md:w-[23.5%] w-[48%] relative">
+        <div class="md:w-[23.5%] w-[48%] relative" data-aos="fade-up">
           <img src="img/pep1.png" class="w-full" alt="" />
           <div class="max-md:hidden mt-8 text-xl text-center">
             <div class="font-bold">Daffa Althaf R</div>
@@ -372,7 +415,11 @@
             <div class="">Web Developer</div>
           </div>
         </div>
-        <div class="md:w-[23.5%] w-[48%] relative">
+        <div
+          class="md:w-[23.5%] w-[48%] relative"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        >
           <img src="img/pep2.png" class="w-full" alt="" />
           <div class="max-md:hidden mt-8 text-xl text-center">
             <div class="font-bold">Aulia Nadyasari</div>
@@ -385,7 +432,11 @@
             <div class="">UI UX Designer</div>
           </div>
         </div>
-        <div class="md:w-[23.5%] w-[48%] relative">
+        <div
+          class="md:w-[23.5%] w-[48%] relative"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <img src="img/pep3.png" class="w-full" alt="" />
           <div class="max-md:hidden mt-8 text-xl text-center">
             <div class="font-bold">M Aby Pratama</div>
@@ -398,7 +449,11 @@
             <div class="">Web Developer</div>
           </div>
         </div>
-        <div class="md:w-[23.5%] w-[48%] relative">
+        <div
+          class="md:w-[23.5%] w-[48%] relative"
+          data-aos="fade-down"
+          data-aos-delay="900"
+        >
           <img src="img/pep4.png" class="w-full" alt="" />
           <div class="max-md:hidden mt-8 text-xl text-center">
             <div class="font-bold">Harlin Septia P</div>
@@ -423,12 +478,19 @@
       class="mt-24 md:mt-48 container mx-auto px-4 md:px-32 md:w-[68%] relative"
     >
       <div class="">
-        <p class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight">
+        <p
+          class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight"
+          data-aos="fade-down"
+        >
           “Every single person comes away and says - wow that's a really slick
           experience, that was so easy to use. I feel so much less stressed as I
           now know we’re doing everything by the book.”
         </p>
-        <div class="flex items-center mt-6 gap-6">
+        <div
+          class="flex items-center mt-6 gap-6"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <img src="img/pep1.png" class="w-14 rounded-full" alt="" />
           <div class="">
             <div class="font-bold text-xl">Daffa Althaf R</div>
@@ -437,11 +499,18 @@
         </div>
       </div>
       <div class="mt-12 md:mt-20">
-        <p class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight">
+        <p
+          class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight"
+          data-aos="fade-down"
+        >
           “Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, amet
           atque..”
         </p>
-        <div class="flex items-center mt-6 gap-6">
+        <div
+          class="flex items-center mt-6 gap-6"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <img src="img/pep1.png" class="w-14 rounded-full" alt="" />
           <div class="">
             <div class="font-bold text-xl">Daffa Althaf R</div>
@@ -460,10 +529,13 @@
       class="my-20 md:my-48 container mx-auto md:py-16 p-12 md:px-20 w-[95%] md:w-[73%] relative bg-primary flex max-md:flex-col justify-between rounded-xl overflow-hidden"
     >
       <div class="max-w-md">
-        <div class="text-3xl font-semibold tracking-tight max-md:text-center">
+        <div
+          class="text-3xl font-semibold tracking-tight max-md:text-center"
+          data-aos="fade-down"
+        >
           Let's create some magics with us
         </div>
-        <div class="mt-4">
+        <div class="mt-4" data-aos="fade-up">
           Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac
           volutpat, viverra magna risus aliquam massa. Ac aliquam ac volutpat,
           viverra magna risus.
@@ -471,6 +543,8 @@
       </div>
       <div class="flex justify-center mt-4">
         <button
+          data-aos="zoom-in-up"
+          data-aos-delay="5000"
           class="py-1 md:py-2 px-4 text-xl md:text-2xl font-semibold rounded-lg bg-blue-500 text-white z-10 relative duration-300 hover:bg-blue-700 hover:scale-105 max-h-12"
         >
           Get In Touch
@@ -562,5 +636,9 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
   </body>
 </html>
