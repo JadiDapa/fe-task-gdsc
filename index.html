@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fadhav | Website Building Service</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,52 +12,114 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- Hero Section [start] -->
 
     <div class="bg-gradient-to-b from-primary from-40% h-32 w-full absolute" />
     <section id="hero" class="container my-8 mx-auto w-[95%]">
-      <header class="flex justify-between">
-        <img src="img/space.png" class="w-20" alt="" />
+      <header x-data="{ open: false }" class="flex justify-between">
+        <img src="img/logo.png" class="w-32" alt="" />
         <ul
-          class="list-none flex items-center gap-10 font-bold text-slate-400 text-sm"
+          class="list-none md:flex items-center gap-10 font-bold text-slate-400 text-sm hidden"
         >
-          <li class="">Home</li>
-          <li class="">Templates</li>
-          <li class="">Price</li>
-          <li class="">Help</li>
+          <li class=""><a href="#hero">HOME</a></li>
+          <li class=""><a href="#about">ABOUT</a></li>
+          <li class=""><a href="#services">SERVICES</a></li>
+          <li class=""><a href="#members">TEAM</a></li>
           <button class="text-blue-500 border px-1.5 py-1">Get In Touch</button>
         </ul>
+        <div class="md:hidden">
+          <ion-icon
+            x-show="! open"
+            x-transition
+            @click="open = ! open"
+            class="text-3xl hover:text-orange-600 duration-300"
+            name="grid-outline"
+          ></ion-icon>
+        </div>
+        <div
+          x-show="open"
+          x-transition:enter-start="opacity-0 -translate-x-64"
+          x-transition:leave-end="opacity-0 -translate-x-64"
+          @click.outside="open = false"
+          class="bg-white h-screen w-10/12 fixed z-50 top-0 left-0 transition duration-500 ease-out flex flex-col justify-between"
+        >
+          <ion-icon
+            @click="open = false"
+            class="text-4xl absolute top-7 -right-14"
+            name="close-circle-outline"
+          ></ion-icon>
+          <ul
+            class="list-none flex flex-col gap-8 justify-center w-full pt-8 text-xl px-6 text-center"
+          >
+            <li class="my-6 flex justify-center">
+              <img src="img/logo.png" class="w-48" alt="" />
+            </li>
+            <li
+              @click="open = false"
+              class="hover:underline hover:text-orange-400 duration-300"
+            >
+              <a href="#hero">HOME</a>
+            </li>
+            <li
+              @click="open = false"
+              class="hover:underline hover:text-orange-400 duration-300"
+            >
+              <a href="#about">ABOUT</a>
+            </li>
+            <li
+              @click="open = false"
+              class="hover:underline hover:text-orange-400 duration-300"
+            >
+              <a href="#services">SERVICES</a>
+            </li>
+            <li
+              @click="open = false"
+              class="hover:underline hover:text-orange-400 duration-300"
+            >
+              <a href="#members">TEAM</a>
+            </li>
+          </ul>
+          <button
+            class="py-1.5 px-2.5 text-xl font-semibold rounded-lg bg-blue-500 text-white max-w-max mt-6 mx-auto mb-8"
+          >
+            Get In Touch
+          </button>
+        </div>
       </header>
-      <div class="mt-24 mx-24">
-        <div class="flex justify-between">
-          <div class="flex flex-col justify-center w-[55%]">
-            <h3 class="text-xl font-semibold text-slate-500">
-              DESIGN INSPIRATION
+      <div class="mt-12 md:mt-24 md:mx-24">
+        <div class="md:flex justify-between">
+          <div class="flex flex-col justify-center md:w-[55%]">
+            <h3 class="text-xl font-semibold text-slate-500 max-md:text-center">
+              WEBSITE BUILDER
             </h3>
             <h1
-              class="text-[66px] leading-[80px] font-semibold mt-4 tracking-tight"
+              class="text-4xl md:text-[66px] md:leading-[80px] font-semibold mt-4 tracking-tight max-md:text-center"
             >
-              Convallis turpis erat tempus, viverra aliquet.
+              We Will Create the "Perfect" Website for Your Needies'
             </h1>
             <button
-              class="py-3 px-5 text-3xl font-semibold rounded-lg bg-blue-500 text-white max-w-max mt-12"
+              class="py-1.5 px-2.5 md:py-3 md:px-5 text-xl md:text-3xl font-semibold rounded-lg bg-blue-500 text-white max-w-max mt-6 md:mt-12 max-md:mx-auto"
             >
               Get In Touch
             </button>
           </div>
-          <div class="w-[43%]">
-            <img src="/img/image1.png" class="w-full" alt="" />
+          <div class="md:w-[43%] max-md:mt-8">
+            <img
+              src="/img/image1.png"
+              class="w-3/4 md:w-full max-md:mx-auto rounded-md"
+              alt=""
+            />
           </div>
         </div>
-        <div class="w-1/2">
+        <div class="md:w-1/2 max-md:mt-6 max-md:hidden">
           <p class="text-2xl font-semibold max-w-lg">
             I feel so much less stressed ❤️ as I now know by the book.”
           </p>
           <div class="flex gap-6 items-center mt-4">
-            <img class="rounded-full w-14" src="img/image2.png" alt="" />
+            <img class="rounded-full w-14" src="img/pep1.png" alt="" />
             <div class="text-lg">
-              <div class="font-semibold text-2xl">Andry Ford</div>
+              <div class="font-semibold text-2xl">Daffa Althaf R</div>
               <div class="text-2xl">CEO of Whatever</div>
             </div>
           </div>
@@ -71,69 +133,120 @@
 
     <section
       id="about"
-      class="container mt-48 mx-auto px-32 py-32 rounded-[28px] bg-gradient-to-b from-primary from-30% w-[90%] relative"
+      class="container mt-48 mx-auto px-2 md:px-32 py-12 md:py-32 rounded-[28px] bg-gradient-to-b from-primary from-30% w-[90%] relative overflow-hidden"
     >
       <div class="absolute top-0 right-0">
         <img src="img/vector1.png" class="w-60" alt="" />
       </div>
-      <div class="w-full max-w-xl">
-        <h3 class="text-lg font-semibold">DESIGN CONCEPT</h3>
-        <h2 class="text-5xl font-bold mt-8">
-          The best design for your studio website
+      <div class="w-full max-w-xl max-md:text-center z-10">
+        <h3 class="text-xl md:text-lg font-semibold">ABOUT US</h3>
+        <h2 class="text-3xl md:text-5xl font-bold mt-8 tracking-wide">
+          Unleash Your Creativity, Shape Your Online Presence!
         </h2>
-        <p class="mt-8 font-semibold text-lg leading-6">
-          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam
-          auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat
-          tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
-          a, duis volutpat.
+        <p
+          class="mt-8 md:font-semibold md:text-lg leading-6 max-md:text-justify px-2"
+        >
+          Welcome to
+          <span class="font-bold text-orange-600">FADHAV</span> Studio! With a
+          passion for creativity and a commitment to excellence, we specialize
+          in crafting custom websites tailored to your unique vision. With years
+          of experience in web development , we understand the importance of
+          creating a website that not only looks incredible but also delivers
+          exceptional user experiences. Let's work together to turn your digital
+          dreams into reality!
         </p>
       </div>
-      <div class="flex flex-wrap mt-12 justify-between gap-y-8">
-        <div class="flex gap-6 max-w-[49%]">
-          <div class="">
-            <img src="img/icon1.png" class="w-16" alt="" />
+      <div
+        class="flex flex-wrap mt-12 justify-between md:gap-y-8 gap-4 max-md:text-sm text-justify"
+      >
+        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+          <div class="max-md:hidden">
+            <div class="text-4xl text-slate-400">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
           </div>
           <div class="">
-            <div class="text-xl font-bold">Design Concept</div>
+            <div class="text-xl font-bold">
+              Personalized Consult
+              <span>
+                <ion-icon
+                  class="text-xl md:hidden inline-block translate-x-2"
+                  name="chatbubbles-outline"
+                ></ion-icon
+              ></span>
+            </div>
             <p class="mt-2">
-              Vitae nulla nunc euismod vel nunc euismod velpretium tellus
-              accumsan nulla nunc euismod ve semper.
+              Providing personalized consultations to understand your specific
+              needs, goals, and preferences.
             </p>
           </div>
         </div>
-        <div class="flex gap-6 max-w-[49%]">
-          <div class="">
-            <img src="img/icon1.png" class="w-16" alt="" />
+
+        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+          <div class="max-md:hidden">
+            <div class="text-4xl text-slate-400">
+              <ion-icon name="sparkles-outline"></ion-icon>
+            </div>
           </div>
           <div class="">
-            <div class="text-xl font-bold">Design Concept</div>
+            <div class="text-xl font-bold">
+              Tailored Design Solutions
+              <span>
+                <ion-icon
+                  class="text-xl md:hidden inline-block translate-x-2"
+                  name="sparkles-outline"
+                ></ion-icon
+              ></span>
+            </div>
             <p class="mt-2">
-              Vitae nulla nunc euismod vel nunc euismod velpretium tellus
-              accumsan nulla nunc euismod ve semper.
+              Offering custom design solutions for websites that stand out and
+              engage the audience.
             </p>
           </div>
         </div>
-        <div class="flex gap-6 max-w-[49%]">
-          <div class="">
-            <img src="img/icon1.png" class="w-16" alt="" />
+
+        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+          <div class="max-md:hidden">
+            <div class="text-4xl text-slate-400">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
           </div>
           <div class="">
-            <div class="text-xl font-bold">Design Concept</div>
+            <div class="text-xl font-bold">
+              Responsive Support
+              <span>
+                <ion-icon
+                  class="text-xl md:hidden inline-block translate-x-2"
+                  name="phone-portrait-outline"
+                ></ion-icon
+              ></span>
+            </div>
             <p class="mt-2">
-              Vitae nulla nunc euismod vel nunc euismod velpretium tellus
-              accumsan nulla nunc euismod ve semper.
+              Counting on timely assistance and troubleshooting throughout the
+              website's journey.
             </p>
           </div>
         </div>
-        <div class="flex gap-6 max-w-[49%]">
-          <div class="">
-            <img src="img/icon1.png" class="w-16" alt="" />
+
+        <div class="flex gap-6 md:max-w-[49%] max-md:p-2">
+          <div class="max-md:hidden">
+            <div class="text-4xl text-slate-400">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
           </div>
           <div class="">
-            <div class="text-xl font-bold">Design Concept</div>
+            <div class="text-xl font-bold">
+              Ongoing Collaboration
+              <span>
+                <ion-icon
+                  class="text-xl md:hidden inline-block translate-x-2"
+                  name="people-outline"
+                ></ion-icon
+              ></span>
+            </div>
             <p class="mt-2">
-              Vitae nulla nunc euismod vel nunc euismod velpretium tellus
-              accumsan nulla nunc euismod ve semper.
+              Partnership doesn't end at launch. Here for ongoing support and
+              guidance to help the website evolve.
             </p>
           </div>
         </div>
@@ -144,12 +257,17 @@
 
     <!-- Services Section [start] -->
 
-    <section id="services" class="container mx-auto px-32 w-[90%] relative">
-      <div class="flex justify-between">
-        <h2 class="text-4xl font-bold max-w-md">
-          The best design for your studio website
+    <section
+      id="services"
+      class="container mx-auto md:px-32 w-[90%] max-md:mt-20 relative"
+    >
+      <div class="md:flex justify-between">
+        <h2 class="text-4xl font-bold max-w-md max-md:text-center">
+          What we provided for you
         </h2>
-        <div class="flex items-center gap-2 text-blue-600">
+        <div
+          class="hidden md:flex items-center gap-2 text-blue-600 max-md:mt-4"
+        >
           <span class="underline font-semibold">Experienced team</span>
           <span
             ><ion-icon
@@ -159,44 +277,63 @@
           ></span>
         </div>
       </div>
-      <div class="flex justify-between mt-20">
-        <div class="w-[32%] custom-b-shadow rounded-lg">
-          <div class="py-10 px-8">
-            <div class="text-3xl font-semibold">Audit</div>
-            <div class="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac
-              volutpat, viverra magna risus aliquam massa. Ac aliquam ac
-              volutpat, viverra magna risus.
+      <div
+        class="flex flex-col md:flex-row justify-center gap-4 md:justify-between mt-4 md:mt-20"
+      >
+        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+          <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
+            <div class="text-3xl font-semibold max-md:text-center">
+              Landing Page
+            </div>
+            <div class="max-md:text-center mt-2">
+              Creating high-converting landing pages tailored to your brand. Our
+              service crafts engaging designs and persuasive content to
+              captivate visitors and drive action
             </div>
           </div>
           <div class="mt-0.5 py-4 px-8 z-10 border-t-2 border-slate-200">
-            <div class="font-bold text-slate-300">Experienced Team</div>
+            <div
+              class="font-bold text-slate-400 hover:text-blue-500 duration-300 max-md:text-center"
+            >
+              More Information >
+            </div>
           </div>
         </div>
-        <div class="w-[32%] custom-b-shadow rounded-lg">
-          <div class="py-10 px-8">
-            <div class="text-3xl font-semibold">Audit</div>
-            <div class="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac
-              volutpat, viverra magna risus aliquam massa. Ac aliquam ac
-              volutpat, viverra magna risus.
+        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+          <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
+            <div class="text-3xl font-semibold max-md:text-center">SAAS</div>
+            <div class="max-md:text-center mt-2">
+              Crafting modern SAAS websites for your online presence. We
+              specialize in responsive design and seamless functionality
+              tailored to your business needs.
             </div>
           </div>
           <div class="mt-0.5 py-4 px-8 z-10 border-t-2 border-slate-200">
-            <div class="font-bold text-slate-300">Experienced Team</div>
+            <div
+              class="font-bold text-slate-400 hover:text-blue-500 duration-300 max-md:text-center"
+            >
+              More Information >
+            </div>
           </div>
         </div>
-        <div class="w-[32%] custom-b-shadow rounded-lg">
-          <div class="py-10 px-8">
-            <div class="text-3xl font-semibold">Audit</div>
-            <div class="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac
-              volutpat, viverra magna risus aliquam massa. Ac aliquam ac
-              volutpat, viverra magna risus.
+        <div class="md:w-[32%] custom-b-shadow rounded-lg">
+          <div class="md:h-80 py-5 md:py-10 px-4 md:px-8">
+            <div class="text-3xl font-semibold max-md:text-center">
+              Web Ecosystem
+            </div>
+            <div class="max-md:text-center mt-2">
+              Crafting digital experiences as unique as your vision. Creating
+              bespoke websites that reflect your brand's essence and goals. From
+              captivating portfolios to interactive e-commerce hubs, we blend
+              innovative design with seamless functionality.
             </div>
           </div>
           <div class="mt-0.5 py-4 px-8 z-10 border-t-2 border-slate-200">
-            <div class="font-bold text-slate-300">Experienced Team</div>
+            <div
+              class="font-bold text-slate-400 hover:text-blue-500 duration-300 max-md:text-center"
+            >
+              More Information >
+            </div>
           </div>
         </div>
       </div>
@@ -208,42 +345,70 @@
 
     <section
       id="members"
-      class="mt-48 container mx-auto px-32 w-[90%] relative"
+      class="mt-48 container mx-auto px-2 md:px-32 w-[90%] relative"
     >
       <div class="text-center">
-        <h2 class="text-5xl font-bold">Our Members</h2>
-        <h3 class="mt-8 text-lg max-w-2xl mx-auto">
-          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam
-          auctor sit ipsum malesuada a, duis volutpat.
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Those who does the "Magic"
+        </h2>
+        <h3 class="mt-4 md:text-lg max-w-2xl mx-auto">
+          Just like skilled magicians mesmerize audiences with their magic, this
+          team utilizes expertise and creativity to craft captivating online
+          realms, weaving digital wonders that leave a lasting impression on
+          audiences worldwide.
         </h3>
       </div>
-      <div class="mt-16 flex justify-between">
-        <div class="w-[23.5%]">
+      <div class="mt-8 flex gap-2 justify-between flex-wrap">
+        <div class="md:w-[23.5%] w-[48%] relative">
           <img src="img/pep1.png" class="w-full" alt="" />
-          <div class="mt-8 text-xl text-center">
+          <div class="max-md:hidden mt-8 text-xl text-center">
             <div class="font-bold">Daffa Althaf R</div>
             <div class="text-lg">Web Developer</div>
           </div>
-        </div>
-        <div class="w-[23.5%]">
-          <img src="img/pep1.png" class="w-full" alt="" />
-          <div class="mt-8 text-xl text-center">
-            <div class="font-bold">Daffa Althaf R</div>
-            <div class="text-lg">Web Developer</div>
+          <div
+            class="md:hidden absolute bottom-0 pr-2 text-slate-300 text-right w-full bg-slate-500/30 rounded-b-md"
+          >
+            <div class="font-semibold">Daffa Althaf R</div>
+            <div class="">Web Developer</div>
           </div>
         </div>
-        <div class="w-[23.5%]">
-          <img src="img/pep1.png" class="w-full" alt="" />
-          <div class="mt-8 text-xl text-center">
-            <div class="font-bold">Daffa Althaf R</div>
-            <div class="text-lg">Web Developer</div>
+        <div class="md:w-[23.5%] w-[48%] relative">
+          <img src="img/pep2.png" class="w-full" alt="" />
+          <div class="max-md:hidden mt-8 text-xl text-center">
+            <div class="font-bold">Aulia Nadyasari</div>
+            <div class="text-lg">UI UX Designer</div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 pr-2 text-slate-300 text-right w-full bg-slate-500/30 rounded-b-md"
+          >
+            <div class="font-semibold">Aulia Nadyasari</div>
+            <div class="">UI UX Designer</div>
           </div>
         </div>
-        <div class="w-[23.5%]">
-          <img src="img/pep1.png" class="w-full" alt="" />
-          <div class="mt-8 text-xl text-center">
-            <div class="font-bold">Daffa Althaf R</div>
+        <div class="md:w-[23.5%] w-[48%] relative">
+          <img src="img/pep3.png" class="w-full" alt="" />
+          <div class="max-md:hidden mt-8 text-xl text-center">
+            <div class="font-bold">M Aby Pratama</div>
             <div class="text-lg">Web Developer</div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 pr-2 text-slate-300 text-right w-full bg-slate-500/30 rounded-b-md"
+          >
+            <div class="font-semibold">M Aby Pratama</div>
+            <div class="">Web Developer</div>
+          </div>
+        </div>
+        <div class="md:w-[23.5%] w-[48%] relative">
+          <img src="img/pep4.png" class="w-full" alt="" />
+          <div class="max-md:hidden mt-8 text-xl text-center">
+            <div class="font-bold">Harlin Septia P</div>
+            <div class="text-lg">Idea Research</div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 pr-2 text-slate-300 text-right w-full bg-slate-500/30 rounded-b-md"
+          >
+            <div class="font-semibold">Harlin Septia P</div>
+            <div class="">Idea Researcher</div>
           </div>
         </div>
       </div>
@@ -253,28 +418,31 @@
 
     <!-- Quotes Section [start] -->
 
-    <section id="quotes" class="mt-48 container mx-auto px-32 w-[68%] relative">
+    <section
+      id="quotes"
+      class="mt-24 md:mt-48 container mx-auto px-4 md:px-32 md:w-[68%] relative"
+    >
       <div class="">
-        <p class="text-3xl/10 font-semibold tracking-tight">
+        <p class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight">
           “Every single person comes away and says - wow that's a really slick
           experience, that was so easy to use. I feel so much less stressed as I
           now know we’re doing everything by the book.”
         </p>
-        <div class="flex items-center mt-10 gap-6">
-          <img src="img/image2.png" class="w-14" alt="" />
+        <div class="flex items-center mt-6 gap-6">
+          <img src="img/pep1.png" class="w-14 rounded-full" alt="" />
           <div class="">
             <div class="font-bold text-xl">Daffa Althaf R</div>
             <div class="text-lg">Web Developer</div>
           </div>
         </div>
       </div>
-      <div class="mt-20">
-        <p class="text-3xl/10 font-semibold tracking-tight">
+      <div class="mt-12 md:mt-20">
+        <p class="text-xl/7 md:text-3xl/10 font-semibold tracking-tight">
           “Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, amet
           atque..”
         </p>
-        <div class="flex items-center mt-10 gap-6">
-          <img src="img/image2.png" class="w-14" alt="" />
+        <div class="flex items-center mt-6 gap-6">
+          <img src="img/pep1.png" class="w-14 rounded-full" alt="" />
           <div class="">
             <div class="font-bold text-xl">Daffa Althaf R</div>
             <div class="text-lg">Web Developer</div>
@@ -285,15 +453,15 @@
 
     <!-- Quotes Section [end] -->
 
-    <!-- Quotes Section [start] -->
+    <!-- QTA Section [start] -->
 
     <section
       id="quotes"
-      class="my-48 container mx-auto py-16 px-20 w-[73%] relative bg-primary flex justify-between rounded-xl"
+      class="my-20 md:my-48 container mx-auto md:py-16 p-12 md:px-20 w-[95%] md:w-[73%] relative bg-primary flex max-md:flex-col justify-between rounded-xl overflow-hidden"
     >
       <div class="max-w-md">
-        <div class="text-3xl font-semibold tracking-tight">
-          All-in-one platform for business
+        <div class="text-3xl font-semibold tracking-tight max-md:text-center">
+          Let's create some magics with us
         </div>
         <div class="mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac
@@ -301,35 +469,39 @@
           viverra magna risus.
         </div>
       </div>
-      <div class="">
+      <div class="flex justify-center mt-4">
         <button
-          class="py-2 px-4 text-2xl font-semibold rounded-lg bg-blue-500 text-white z-10"
+          class="py-1 md:py-2 px-4 text-xl md:text-2xl font-semibold rounded-lg bg-blue-500 text-white z-10 relative duration-300 hover:bg-blue-700 hover:scale-105 max-h-12"
         >
           Get In Touch
         </button>
       </div>
-      <div class="absolute top-0 right-0">
+      <div class="absolute top-0 right-0 z-0">
         <img src="img/vector1.png" class="w-40" alt="" />
       </div>
     </section>
 
-    <!-- Quotes Section [end] -->
+    <!-- QTA Section [end] -->
 
     <!-- Footer Section [start] -->
 
     <section id="footer" class="bg-dark text-[#919295]">
-      <div class="flex justify-between w-full py-16 px-44">
+      <div
+        class="flex max-md:flex-col gap-6 justify-between w-full py-14 md:py-16 px-8 md:px-44"
+      >
         <div class="">
-          <div class="text-2xl font-bold">SPACE</div>
-          <div class="mt-8 max-w-md">
+          <div class="">
+            <img src="img/logo.png" class="md:w-48 w-32" alt="" />
+          </div>
+          <div class="mt-4 md:mt-8 max-w-sm md:max-w-md max-md:text-sm">
             The best design for your web studio website. Vitae nulla nunc
             euismod vel pretium tellus accumsan semper. Vitae nulla nunc euismod
             vel pretium tellus accumsan semper.
           </div>
         </div>
-        <div class="text-sm">
+        <div class="text-sm max-md:hidden">
           <div class="">Section</div>
-          <ul class="list-none text-slate-200 mt-8 leading-7">
+          <ul class="list-none text-slate-300 mt-8 leading-7">
             <li>Home</li>
             <li>About</li>
             <li>Services</li>
@@ -337,21 +509,41 @@
             <li>CTA</li>
           </ul>
         </div>
-        <div class="text-sm">
+        <div class="text-sm max-md:hidden">
           <div class="">Contact</div>
-          <ul class="list-none text-slate-200 mt-8 leading-7">
+          <ul class="list-none text-slate-300 mt-8 leading-7">
             <li>Home</li>
             <li>About</li>
             <li>Services</li>
             <li>Mmebers</li>
             <li>CTA</li>
           </ul>
+        </div>
+        <div class="md:hidden flex gap-16">
+          <div class="text-sm">
+            <div class="">Section</div>
+            <ul class="list-none text-slate-300 mt-4 leading-7">
+              <li>Home</li>
+              <li>About</li>
+              <li>Services</li>
+              <li>Team</li>
+            </ul>
+          </div>
+          <div class="text-sm">
+            <div class="">Contact</div>
+            <ul class="list-none text-slate-300 mt-4 leading-7">
+              <li>Linked In</li>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div
-        class="flex justify-between w-full py-6 px-44 text-sm border-t border-[#919295]"
+        class="flex flex-col-reverse gap-1 md:flex-row justify-center items-center w-full py-4 md:py-6 md:px-44 text-sm border-t border-[#919295]"
       >
-        <div class="">© 2023 All Rights Reserved.</div>
+        <div class="text-center">© 2023 All Rights Reserved.</div>
         <div class="text-white">Terms of Service</div>
       </div>
     </section>
@@ -365,6 +557,10 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
   </body>
 </html>
